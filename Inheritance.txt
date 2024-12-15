@@ -1,0 +1,183 @@
+class Employee
+{
+    private String emp_name;
+    private String emp_id;
+    private String emp_address;
+    private String emp_mailId;
+    private String emp_mobno;
+
+    public Employee(String emp_name, String emp_id,String emp_address,String emp_mailId,String emp_mobno)
+   {
+        this.emp_name=emp_name;
+        this.emp_id=emp_id;
+        this.emp_address=emp_address;
+        this.emp_mailId=emp_mailId;
+        this.emp_mobno=emp_mobno;
+   }
+   public void EmployeeDetails()
+   {
+    System.out.println("Employee name:\t"+emp_name);
+     System.out.println("Employee idt:\t"+emp_id);
+      System.out.println("Employee address:\t"+emp_address);
+       System.out.println("Employee mailId:\t"+emp_mailId);
+        System.out.println("Employee mobile number:\t"+emp_mobno);
+
+   }
+
+}
+class programmer extends Employee
+{
+    private double basicpay;
+    public  programmer(String emp_name, String emp_id,String emp_address,String emp_mailId,String emp_mobno,double basicpay)
+    {
+        super(emp_name,emp_id,emp_address,emp_mailId,emp_mobno);
+        this.basicpay=basicpay;
+    }
+    public void generatePayslip()
+    {
+        System.out.println("the basic pay of the employee is:\t"+basicpay);
+        double da=0.97*basicpay;
+         System.out.println("the DA of the employee is:\t"+da);
+         double hra=0.10*basicpay;
+         System.out.println("the HRA of the employee is:\t"+hra);
+         double pf=0.12*basicpay;
+         System.out.println("the PF of the employee is:\t"+pf);
+         double staffclubfund=0.001*basicpay;
+         System.out.println("the Stsff club fund of the employee is:\t"+staffclubfund);
+         double grosssalary=da+hra+basicpay;
+                  System.out.println("the gross salary of the employee is:\t"+grosssalary);
+        double netsalary=grosssalary-pf-staffclubfund;
+         System.out.println("the net salary of the employee is:\t"+netsalary);
+
+
+
+
+    }
+
+}
+
+class Teamleader extends Employee
+{
+    private double basicpay;
+    public  Teamleader(String emp_name, String emp_id,String emp_address,String emp_mailId,String emp_mobno,double basicpay)
+    {
+        super(emp_name,emp_id,emp_address,emp_mailId,emp_mobno);
+        this.basicpay=basicpay;
+    }
+    public void generatePayslip()
+    {
+        System.out.println("the basic pay of the employee is:\t"+basicpay);
+        double da=0.97*basicpay;
+         System.out.println("the DA of the employee is:\t"+da);
+         double hra=0.10*basicpay;
+         System.out.println("the HRA of the employee is:\t"+hra);
+         double pf=0.12*basicpay;
+         System.out.println("the PF of the employee is:\t"+pf);
+         double staffclubfund=0.001*basicpay;
+         System.out.println("the Stsff club fund of the employee is:\t"+staffclubfund);
+         double grosssalary=da+hra+basicpay;
+                  System.out.println("the gross salary of the employee is:\t"+grosssalary);
+        double netsalary=grosssalary-pf-staffclubfund;
+         System.out.println("the net salary of the employee is:\t"+netsalary);
+
+
+
+
+    }
+
+
+}
+class APM extends Employee
+{
+    private double basicpay;
+    public   APM (String emp_name, String emp_id,String emp_address,String emp_mailId,String emp_mobno,double basicpay)
+    {
+        super(emp_name,emp_id,emp_address,emp_mailId,emp_mobno);
+        this.basicpay=basicpay;
+    }
+    public void generatePayslip()
+    {
+        System.out.println("the basic pay of the employee is:\t"+basicpay);
+        double da=0.97*basicpay;
+         System.out.println("the DA of the employee is:\t"+da);
+         double hra=0.10*basicpay;
+         System.out.println("the HRA of the employee is:\t"+hra);
+         double pf=0.12*basicpay;
+         System.out.println("the PF of the employee is:\t"+pf);
+         double staffclubfund=0.001*basicpay;
+         System.out.println("the Stsff club fund of the employee is:\t"+staffclubfund);
+         double grosssalary=da+hra+basicpay;
+                  System.out.println("the gross salary of the employee is:\t"+grosssalary);
+        double netsalary=grosssalary-pf-staffclubfund;
+         System.out.println("the net salary of the employee is:\t"+netsalary);
+
+
+
+
+    }
+
+
+}
+class projectManeger extends Employee
+{
+    private double basicpay;
+    public  projectManeger(String emp_name, String emp_id,String emp_address,String emp_mailId,String emp_mobno,double basicpay)
+    {
+        super(emp_name,emp_id,emp_address,emp_mailId,emp_mobno);
+        this.basicpay=basicpay;
+    }
+    public void generatePayslip()
+    {
+        System.out.println("the basic pay of the employee is:\t"+basicpay);
+        double da=0.97*basicpay;
+         System.out.println("the DA of the employee is:\t"+da);
+         double hra=0.10*basicpay;
+         System.out.println("the HRA of the employee is:\t"+hra);
+         double pf=0.12*basicpay;
+         System.out.println("the PF of the employee is:\t"+pf);
+         double staffclubfund=0.001*basicpay;
+         System.out.println("the Stsff club fund of the employee is:\t"+staffclubfund);
+         double grosssalary=da+hra+basicpay;
+                  System.out.println("the gross salary of the employee is:\t"+grosssalary);
+        double netsalary=grosssalary-pf-staffclubfund;
+         System.out.println("the net salary of the employee is:\t"+netsalary);
+
+
+
+
+    }
+}
+
+class EmployeeDemo
+{
+    public static void main(String[] args)
+    {
+        programmer programmer=new programmer("sagar","123","sangmner","@gmail.com","1234567890",5000);
+        System.out.println("***Employee information****");
+        programmer.EmployeeDetails();
+        programmer.generatePayslip();
+        System.out.println();
+
+
+
+
+         Teamleader Teamleader=new Teamleader("rushikesh","234","sangmner","@gmail.com","1234567890",34567);
+        System.out.println("***Employee information****");
+        Teamleader.EmployeeDetails();
+       Teamleader.generatePayslip();
+         System.out.println();
+        
+        
+         APM apm=new APM ("aniket","345","sangmner","@gmail.com","1234567890",8000);
+        System.out.println("***Employee information****");
+        apm.EmployeeDetails();
+       apm.generatePayslip(); 
+        
+        
+        projectManeger projectManeger=new projectManeger("rohan","627","sangmner","@gmail.com","1234567890",2000);
+        System.out.println("***Employee information****");
+        projectManeger.EmployeeDetails();
+      projectManeger.generatePayslip();
+
+    }
+}
