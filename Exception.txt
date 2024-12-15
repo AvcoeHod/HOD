@@ -1,0 +1,49 @@
+import java.util.*;
+class exception
+{
+    public static void main(String[] args)
+    {
+        int num1,num2;
+        Scanner sc=new Scanner(System.in);
+        try
+        {
+        System.out.println("ENTER THE FIRST NUMBER:");
+        num1=Integer.parseInt(sc.next());
+         System.out.println("ENTER THE  SECOND NUMBER:");
+        num2=Integer.parseInt(sc.next());
+
+
+        System.out.println(num1/num2);
+        }
+        catch(NumberFormatException e)
+        {
+            System.out.println("ENTER ONLY INTEGER NUMBERS");
+
+        }
+        catch(ArithmeticException e)
+        {
+            System.out.println("num2 eshould not be zero");
+        }
+        int arr[]={1,2,3};
+        try{
+            System.out.println(arr[3]);
+        }
+        catch(ArrayIndexOutOfBoundsException e)
+        {
+            System.out.println(" array index is not present");
+        }
+        String str=null;
+        try{
+                 System.out.println(str.length());
+        }
+        catch(NullPointerException e)
+        {
+            System.out.println("the entire string is null");
+        }
+       
+        
+
+    }
+
+
+}
