@@ -1,0 +1,49 @@
+class publication{
+    String title;
+    double price;
+    int copies;
+publication(String title,double price,int copies){
+    this.title=title;
+    this.price=price;
+    this.copies=copies;
+}
+void saleCopy(int copy){
+    this.copies=copies-copy;
+
+}
+void totalSale(){
+    System.out.println("the total sale is:"+price*copies);
+}
+}
+class Book extends publication{
+    String Author;
+    Book(String title,double price,int copies,String Author){
+        super(title,price,copies);
+        this.Author=Author;
+    }
+    void orderCopies(int copy){
+        this.copies=copies+copy;
+        System.out.println("No of copies orderd : "+copy);
+    }
+}
+class Magzine extends publication{
+    int currentIssue;
+    Magzine(String title,double price,int copies){
+        super(title,price,copies);
+        this.currentIssue=currentIssue;
+    }
+    void receiveIssue(int issue){
+        this.currentIssue=issue;
+    }
+}
+public class exp2{
+    public static void main(String args[]){
+        publication p=new publication("Java",1000,50);
+        Book b =new Book("Java",500,200,"Sangram");
+        p.totalSale();
+        b.orderCopies(80);
+    
+        
+
+    }
+}
