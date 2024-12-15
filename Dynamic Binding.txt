@@ -1,0 +1,74 @@
+import java.util.*;
+abstract class Shape
+{
+    abstract public void compute_area(double a,double b);
+
+    public void calculate_area()
+    {
+
+    }
+
+}
+class Traingle extends Shape
+{
+        double base;
+        double height;
+        public void compute_area(double a,double b)
+        {
+            this.base=a;
+            this.height=b;
+        }
+        public void calculate_area()
+    {
+        System.out.println("the area of Traingle is:\t"+0.5*base*height);
+    }
+
+
+}
+class Rectangle extends Shape
+{
+     double length;
+        double breadth;
+        public void compute_area(double a,double b)
+        {
+            this.length=a;
+            this.breadth=b;
+        }
+        public void calculate_area()
+    {
+        System.out.println("the area of rectangle is:\t"+length*breadth);
+    }
+
+
+}
+class dynamic
+{
+    public static void main(String[] args)
+    {
+        double base,height;
+        double length,breadth;
+        Shape obj1=new Traingle();
+
+        Scanner sc=new Scanner(System.in);
+
+        System.out.println("enter the base of traingle:");
+        base=sc.nextDouble();
+        System.out.println("enter the height of traingle:");
+        height=sc.nextDouble();
+
+        obj1.compute_area(base,height);
+        obj1.calculate_area();
+
+
+
+        Shape obj2=new Rectangle();
+
+        System.out.println("enter the length of rectangle:");
+        length=sc.nextDouble();
+        System.out.println("enter the breadth of rectangle:");
+        breadth=sc.nextDouble();
+
+        obj2.compute_area(length,breadth);
+        obj2.calculate_area();
+    }
+}
